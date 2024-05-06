@@ -1,5 +1,6 @@
 ﻿using APICSHARP.Model;
 using APICSHARP.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APICSHARP.Controllers
@@ -15,6 +16,7 @@ namespace APICSHARP.Controllers
             _employeeRepository = employeeRepository ?? throw new ArgumentNullException(nameof(employeeRepository));
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Add([FromForm] EmployeeViewModel employeeView)
         {
@@ -26,6 +28,7 @@ namespace APICSHARP.Controllers
             return Ok();
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -33,6 +36,7 @@ namespace APICSHARP.Controllers
             return Ok(employees);
         }
 
+        [Authorize]
         [HttpPost]
         [Route("{id}/download")]
         public IActionResult DownloadPhoto(int id)
