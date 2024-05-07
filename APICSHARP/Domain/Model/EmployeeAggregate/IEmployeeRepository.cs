@@ -1,6 +1,6 @@
 ﻿using APICSHARP.Domain.DTOs;
 
-namespace APICSHARP.Domain.Model
+namespace APICSHARP.Domain.Model.EmployeeAggregate
 {
     public interface IEmployeeRepository
     {

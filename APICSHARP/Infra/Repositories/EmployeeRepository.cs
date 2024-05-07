@@ -1,5 +1,5 @@
-﻿using APICSHARP.Domain.Model;
-using APICSHARP.Domain.DTOs;
+﻿using APICSHARP.Domain.DTOs;
+using APICSHARP.Domain.Model.EmployeeAggregate;
 
 namespace APICSHARP.Infra.Repositories
 {

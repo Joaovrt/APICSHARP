@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace APICSHARP.Domain.Model
+namespace APICSHARP.Domain.Model.EmployeeAggregate
 {
 
     [Table("employee")]

@@ -1,6 +1,6 @@
 ﻿using APICSHARP.Application.ViewModel;
 using APICSHARP.Domain.DTOs;
-using APICSHARP.Domain.Model;
+using APICSHARP.Domain.Model.EmployeeAggregate;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

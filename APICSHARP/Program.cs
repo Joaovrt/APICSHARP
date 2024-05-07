@@ -3,9 +3,9 @@ using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
-using APICSHARP.Domain.Model;
 using APICSHARP.Application.Swagger;
 using APICSHARP.Application.Mapping;
+using APICSHARP.Domain.Model.EmployeeAggregate;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -12,7 +12,7 @@ namespace APICSHARP.Controllers
         {
             if (username == "joao" && password == "123")
             {
-                var token = TokenService.GenerateToken(new Domain.Model.Employee());
+                var token = TokenService.GenerateToken(new Domain.Model.EmployeeAggregate.Employee());
                 return Ok(token);
             }
 

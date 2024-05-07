@@ -1,5 +1,5 @@
 ﻿using APICSHARP.Domain.DTOs;
-using APICSHARP.Domain.Model;
+using APICSHARP.Domain.Model.EmployeeAggregate;
 using AutoMapper;
 
 namespace APICSHARP.Application.Mapping
