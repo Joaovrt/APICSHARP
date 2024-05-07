@@ -1,4 +1,4 @@
-﻿using APICSHARP.Model;
+﻿using APICSHARP.Domain.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace APICSHARP.Infra

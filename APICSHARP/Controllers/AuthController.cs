@@ -1,4 +1,4 @@
-﻿using APICSHARP.Services;
+﻿using APICSHARP.Application.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APICSHARP.Controllers
@@ -12,7 +12,7 @@ namespace APICSHARP.Controllers
         {
             if (username == "joao" && password == "123")
             {
-                var token = TokenService.GenerateToken(new Model.Employee());
+                var token = TokenService.GenerateToken(new Domain.Model.Employee());
                 return Ok(token);
             }
 

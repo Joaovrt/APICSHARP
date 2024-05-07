@@ -1,16 +1,19 @@
 using APICSHARP.Infra.Repositories;
-using APICSHARP.Model;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
-using WebApi.Application.Swagger;
+using APICSHARP.Domain.Model;
+using APICSHARP.Application.Swagger;
+using APICSHARP.Application.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+builder.Services.AddAutoMapper(typeof(DomainToDTOMapping));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

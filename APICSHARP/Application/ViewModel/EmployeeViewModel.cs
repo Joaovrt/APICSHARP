@@ -1,4 +1,4 @@
-﻿namespace APICSHARP.ViewModel
+﻿namespace APICSHARP.Application.ViewModel
 {
     public class EmployeeViewModel
     {

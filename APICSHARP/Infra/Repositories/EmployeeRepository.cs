@@ -1,19 +1,29 @@
-﻿using APICSHARP.Model;
+﻿using APICSHARP.Domain.Model;
+using APICSHARP.Domain.DTOs;
 
 namespace APICSHARP.Infra.Repositories
 {
     public class EmployeeRepository : IEmployeeRepository
     {
-        private readonly ConnectionContext _context = new ConnectionContext(); 
+        private readonly ConnectionContext _context = new ConnectionContext();
+
         public void Add(Employee employee)
         {
             _context.Employees.Add(employee);
             _context.SaveChanges();
         }
 
-        public List<Employee> GetAll(int pageNumber, int pageQuantity)
+        public List<EmployeeDTO> GetAll(int pageNumber, int pageQuantity)
         {
-            return _context.Employees.Skip(pageNumber * pageQuantity).Take(pageQuantity).ToList();
+            return _context.Employees.Skip(pageNumber * pageQuantity)
+                .Take(pageQuantity)
+                .Select(b =>
+                new EmployeeDTO()
+                {
+                    Id = b.id,
+                    NameEmployee = b.name,
+                    Photo = b.photo
+                }).ToList();
         }
 
         public Employee? Get(int id)

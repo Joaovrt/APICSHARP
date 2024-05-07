@@ -1,10 +1,10 @@
-﻿using APICSHARP.Model;
+﻿using APICSHARP.Domain.Model;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace APICSHARP.Services
+namespace APICSHARP.Application.Services
 {
     public class TokenService
     {

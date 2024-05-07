@@ -1,5 +1,7 @@
-﻿using APICSHARP.Model;
-using APICSHARP.ViewModel;
+﻿using APICSHARP.Application.ViewModel;
+using APICSHARP.Domain.DTOs;
+using APICSHARP.Domain.Model;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,11 +13,13 @@ namespace APICSHARP.Controllers
     {
         private readonly IEmployeeRepository _employeeRepository;
         private readonly ILogger<EmployeeController> _logger;
+        private readonly IMapper _mapper;
 
-        public EmployeeController(IEmployeeRepository employeeRepository, ILogger<EmployeeController> logger)
+        public EmployeeController(IEmployeeRepository employeeRepository, ILogger<EmployeeController> logger, IMapper mapper)
         {
             _employeeRepository = employeeRepository ?? throw new ArgumentNullException(nameof(employeeRepository));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         [Authorize]
@@ -47,6 +51,17 @@ namespace APICSHARP.Controllers
             var employee = _employeeRepository.Get(id);
             var dataBytes = System.IO.File.ReadAllBytes(employee.photo);
             return File(dataBytes, "image/png");
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public IActionResult Search(int id)
+        {
+            var employess = _employeeRepository.Get(id);
+
+            var employeesDTOS = _mapper.Map<EmployeeDTO>(employess);
+
+            return Ok(employeesDTOS);
         }
     }
 }
