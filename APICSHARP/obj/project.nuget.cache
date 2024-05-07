@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ggkwscnniHod4sKbojSoySKY3L2vxrvwSFUBV9/IEfS7MEdOtT7hiveGfxnsWBJKmAJWrm7WHNPYMsu9jErTwg==",
+  "dgSpecHash": "ElCHxAMqcDE5XmTV30MjF4Pm6Qq65Aw0g/VMawGS4ah3QAS5tBMh087eNJiVXz/f+9t2LH9zrMHs8O+xn8Pe5g==",
   "success": true,
   "projectFilePath": "C:\\Users\\JoaoRosa\\source\\repos\\APICSHARP\\APICSHARP\\APICSHARP.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\JoaoRosa\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\JoaoRosa\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\JoaoRosa\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.1\\microsoft.aspnetcore.authentication.jwtbearer.7.0.1.nupkg.sha512",
+    "C:\\Users\\JoaoRosa\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
+    "C:\\Users\\JoaoRosa\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\JoaoRosa\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0\\microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
     "C:\\Users\\JoaoRosa\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\JoaoRosa\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",

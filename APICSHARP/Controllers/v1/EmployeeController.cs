@@ -5,10 +5,11 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace APICSHARP.Controllers
+namespace APICSHARP.Controllers.v1
 {
     [ApiController]
-    [Route("/api/v1/employee")]
+    [Route("api/v{version:apiVersion}/employee")]
+    [ApiVersion("1.0")]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeRepository _employeeRepository;
@@ -34,7 +35,7 @@ namespace APICSHARP.Controllers
             return Ok();
         }
 
-       
+
         [HttpGet]
         public IActionResult Get(int pageNumber, int pageQuantity)
         {

@@ -1,4 +1,5 @@
-﻿using Microsoft.OpenApi.Any;
+﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -10,6 +11,7 @@ namespace APICSHARP.Application.Swagger
         {
             var apiDescription = context.ApiDescription;
 
+            operation.Deprecated |= apiDescription.IsDeprecated();
 
             if (operation.Parameters == null)
             {
